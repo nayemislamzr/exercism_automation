@@ -6,3 +6,5 @@ uninstall:
 	./binaries/.uninstall.sh
 version:
 	./binaries/.version.sh
+clean:
+	./binaries/.clean.sh
