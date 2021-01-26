@@ -1,4 +1,6 @@
-submit: install 
+all: install 
+	./binaries/.exercism.sh
+submit:		
 	./binaries/.exercism.sh
 install: 
 	./binaries/.install.sh
