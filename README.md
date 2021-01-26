@@ -2,14 +2,14 @@
 
 # Description :<br/>
 
- **-> Usage :**<br/>
+## Usage :<br/>
 
 + Downloading **Exercism** easily & creating environment.
 + Downloading problems only by using name. (*no link needed also case insensitive*)
 + Managing <b>test file</b>,<b>submit files</b> easily using vim splitting window.
 + Submitting problem only by using one key press. <br/>
 
-**-> Author :**<br/>
+## Author :<br/>
 
 + **Name:** nayemislamzr<br/>
 
