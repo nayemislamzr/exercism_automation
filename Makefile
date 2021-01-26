@@ -1,8 +1,8 @@
 submit: install 
-	./.exercism.sh
+	./binaries/.exercism.sh
 install: 
-	./.install.sh
+	./binaries/.install.sh
 uninstall: 
-	./.uninstall.sh
+	./binaries/.uninstall.sh
 version:
-	./.version.sh
+	./binaries/.version.sh
