@@ -1,4 +1,5 @@
 #!/bin/bash
+
 figlet Suck Less ...
 echo "Enter the track:"
 read track
@@ -22,8 +23,8 @@ if [[ -d $trackpath/$dirname ]]
 else
 echo -n "Downloading problem ..."
 echo
-fi
 exercism download --exercise=$dirname --track=$track
+fi
 cd ./$dirname
 sed -i 's/TEST_IGNORE();//' ./test/test_$filename.$track
 echo -n "opening files"
