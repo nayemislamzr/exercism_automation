@@ -3,6 +3,7 @@
 figlet Suck Less ...
 echo "Enter the track:"
 read track
+track=${track,,}
 echo "Enter the name of the problem:"
 cd Problemset
 name=$(cat $(echo $track"_problemset") | fzf --reverse)
