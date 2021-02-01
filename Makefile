@@ -2,6 +2,8 @@ all: install
 	./binaries/.exercism.sh
 submit:		
 	./binaries/.exercism.sh
+cheat:
+	./binaries/.cheat.sh
 install: 
 	./binaries/.install.sh
 uninstall: 
