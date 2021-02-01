@@ -18,6 +18,7 @@
 + **VIM** ( VI Improved for easily managing files)
 + **Figlet** ( minor change in look )
 + **Snap** ( for installing exercism )
++ **FZF** ( fuzzy finder for searching problem )
 
 # How to use : <br/>
 

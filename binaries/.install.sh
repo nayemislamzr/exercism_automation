@@ -41,9 +41,20 @@ echo "installing vim..."
 sudo apt install vim
 fi
 }
+
+function install_fzf()
+{
+if ! [ -x "$(command -v fzf)" ];then
+echo "installing fzf..."
+sudo apt install fzf
+fi
+}
+
 #installing dependencies
 install_snap
 install_figlet
 install_vim
+install_fzf
+
 #installing exercism
 install_exercism
