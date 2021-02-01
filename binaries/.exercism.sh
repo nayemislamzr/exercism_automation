@@ -4,7 +4,8 @@ figlet Suck Less ...
 echo "Enter the track:"
 read track
 echo "Enter the name of the problem:"
-read name
+#read name
+name=$(cat "./Problemset/c_problemset" | fzf --reverse)
 mainpath=$(exercism w)
 cd $mainpath
 trackpath=$(echo -n $mainpath"/"$track)
