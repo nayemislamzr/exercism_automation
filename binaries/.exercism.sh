@@ -28,6 +28,9 @@ echo
 exercism download --exercise=$dirname --track=$track
 fi
 cd ./$dirname
+
+function _c ()
+{
 sed -i 's/TEST_IGNORE();//' ./test/test_$filename.$track
 echo -n "opening files"
 echo
@@ -66,4 +69,47 @@ else
 fi
 }
 submit
+}
+[ $track == "c" ] && _c
 
+function _bash ()
+{
+echo -n "opening files"
+echo
+vim -p $filename.sh $(echo $filename"_test.sh")
+echo -n "Making files ..."
+echo
+bats $(echo $filename"_test.sh")
+function submit ()
+{
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+echo -n "Do you want to submit( Y/N/E )?"
+read bool
+if [[ $bool == "Y" ]] || [[ $bool == "y" ]]
+	then	exercism submit $filename.sh
+	echo -n "${green}Successfully Submitted!!!"
+        sleep 3
+        clear
+elif [[ $bool == "N" ]] || [[ $bool == "n" ]]
+	then	clear        
+        vim -p $filename.sh $(echo $filename"_test.sh")
+echo -n "Making files ..."
+echo
+bats $(echo $filename"_test.sh")
+ submit
+elif [[ $bool == "E" ]] || [[ $bool == "e" ]]
+    then echo -n "${green}Ended ..."
+    sleep 2
+    clear 
+else
+    echo -n "${red}Unknown key pressed!!!"
+    echo
+    sleep 2
+    clear
+fi
+}
+submit
+}
+[ $track == "bash" ] && _bash
